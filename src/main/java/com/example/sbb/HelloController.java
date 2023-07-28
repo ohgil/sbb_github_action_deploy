@@ -1,4 +1,4 @@
-package com.mysite.sbb;
+package com.example.sbb;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,6 +9,6 @@ public class HelloController {
     @GetMapping("/hello")
     @ResponseBody
     public String hello() {
-    	return "Hello Spring Boot Board";
+        return "Hello World";
     }
 }

@@ -1,15 +1,12 @@
-package com.mysite.sbb.answer;
+package com.example.sbb.Answer;
 
 import java.time.LocalDateTime;
+import java.util.Set;
 
-import com.mysite.sbb.question.Question;
+import com.example.sbb.Question.Question;
+import com.example.sbb.user.SiteUser;
+import jakarta.persistence.*;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -28,4 +25,12 @@ public class Answer {
 
     @ManyToOne
     private Question question;
+
+    @ManyToOne
+    private SiteUser author;
+
+    private LocalDateTime modifyDate;
+
+    @ManyToMany
+    Set<SiteUser> voter;
 }

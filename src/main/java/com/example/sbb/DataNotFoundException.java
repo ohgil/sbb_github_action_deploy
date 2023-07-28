@@ -1,4 +1,4 @@
-package com.mysite.sbb;
+package com.example.sbb;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -9,4 +9,4 @@ public class DataNotFoundException extends RuntimeException {
     public DataNotFoundException(String message) {
         super(message);
     }
-}
+}//우선 예외처리를 만들어주는 로직이라고만 기억
